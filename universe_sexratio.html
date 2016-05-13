@@ -71,13 +71,15 @@
     </nav>
 
     <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Data Visualization</h1>
-            <h3>make awesome stuff with Data Visualization</h3>
-            <img class="bannerpic" src="img/banner-02.png" class="img-responsive">
+    <div id="top" class="header">
+        <div id="overview" class="littletitle">
+            <h2 class="genderratio">性別比率</h2>
+            <div id="pie"class="genderpie">
+                <img class="girlpic" src="img/girlpic-1-01.png">
+                <img class="boypic" src="img/boypic-1-01.png">
+            </div>
         </div>
-    </header>
+    </div>
 
 
     <!-- jQuery -->
@@ -85,6 +87,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- pie -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+    <script type="text/javascript" src="js/d3pie.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
@@ -116,6 +122,37 @@
             }
         });
     });
+    </script>
+
+    <script>
+
+        var pie = new d3pie("pie", {
+            labels: {
+              outer: {
+                "format": "none",
+                "pieDistance": 32
+              },
+              percentage: {
+                "color": "#fff",
+                "fontSize": 30,
+                "decimalPlaces": 0
+              }
+            },
+            
+            data: {
+                content: [
+                  { label: "男性", value: 17, color:"#92A8D1" },
+                  { label: "女性", value: 19, color:"#E4B8BA" }
+                ]
+            },
+            tooltips: {
+              enabled: true,
+              type: "placeholder",
+              // string: "{label}, {percentage}%"
+              string: "{label}, {value}"
+            }
+            });
+
     </script>
 
 </body>

@@ -71,13 +71,18 @@
     </nav>
 
     <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Data Visualization</h1>
-            <h3>make awesome stuff with Data Visualization</h3>
-            <img class="bannerpic" src="img/banner-02.png" class="img-responsive">
+    <div id="top" class="header">
+        <div id="overview" class="littletitle">
+            <h2 class="moneyratio">薪資長條圖</h2>
+            <h2 class="yearratio">年資圓餅圖</h2>
+
+            <div id="dountpie"class="moneybar" style="width:50%">
+                <canvas id="canvas" height="450" width="550"></canvas>
+            </div>
+            <div id="pie"class="yearmoneypie"></div>
+
         </div>
-    </header>
+    </div>
 
 
     <!-- jQuery -->
@@ -85,6 +90,14 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- pie -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+    <script type="text/javascript" src="js/Chart.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+    <script type="text/javascript" src="js/d3pie.js"></script>
+    <script type="text/javascript" src="js/yearmoneypie.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
@@ -116,6 +129,31 @@
             }
         });
     });
+
+    </script>
+
+    <script>
+    // var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+
+    var barChartData = {
+        labels : ["25000-30000","30000-35000","35000-40000","40000-45000","45000-50000","50000-55000","55000-60000","60000以上"],
+        datasets : [
+            {
+                fillColor : "rgba(190,206,212,0.5)",
+                strokeColor : "rgba(190,206,212,0.8)",
+                highlightFill: "rgba(190,206,212,0.75)",
+                highlightStroke: "rgba(190,206,212,1)",
+                data : [5,11,7,4,3,1,2,3]
+            }
+        ]
+    }
+    window.onload = function(){
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myBar = new Chart(ctx).Bar(barChartData, {
+            responsive : true
+        });
+    }
+
     </script>
 
 </body>

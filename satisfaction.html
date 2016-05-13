@@ -17,6 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -71,13 +72,14 @@
     </nav>
 
     <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Data Visualization</h1>
-            <h3>make awesome stuff with Data Visualization</h3>
-            <img class="bannerpic" src="img/banner-02.png" class="img-responsive">
+    <div id="top" class="header">
+        <div id="overview" class="littletitle">
+
+            <h2 class="learnbar">相關性與滿意度</h2>
+            <div id="bars" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
         </div>
-    </header>
+    </div>
 
 
     <!-- jQuery -->
@@ -85,6 +87,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/highcharts.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
@@ -115,6 +119,80 @@
                 }
             }
         });
+    });
+
+    </script>
+
+    <script>
+       $('#bars').highcharts({
+        chart: {
+            type: 'column',
+            backgroundColor:"transparent"
+        },
+
+        xAxis: {
+            categories: ['工作內容與在校所學的相關性', '具備能力與工作相符程度', '工作滿意度']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '總人數'
+            },
+            //總數
+            stackLabels: {
+                enabled: true,
+                style: {
+                    fontWeight: 'bold',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'white'
+                }
+            }
+        },
+        //圖表提示
+        legend: {
+            align: 'left',
+            x: 100,
+            verticalAlign: 'top',
+            y: -10,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+            // borderColor: '#ccc',
+            backgroundColor:"white",
+            // borderWidth: 1,
+            shadow: false
+        },
+        tooltip: {
+            headerFormat: '<b>{point.x}</b><br/>',
+            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+        },
+        //圖表數字
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'black',
+                    // style: {
+                    //     textShadow: '0 0 3px black'
+                    // }
+                }
+            }
+        },
+        series: [{
+            name: '非常相關/非常符合',
+            data: [6, 6, 10]
+        }, {
+            name: '相關/符合',
+            data: [24, 23, 20]
+        }, {
+            name: '普通/尚可',
+            data: [8, 12, 13]
+        }, {
+            name: '不相關/不符合',
+            data: [2, 0, 0]
+        }, {
+            name: '非常不相關/非常不符合',
+            data: [3, 2, 0]
+        }]
     });
     </script>
 

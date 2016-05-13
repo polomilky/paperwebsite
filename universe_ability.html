@@ -71,13 +71,16 @@
     </nav>
 
     <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Data Visualization</h1>
-            <h3>make awesome stuff with Data Visualization</h3>
-            <img class="bannerpic" src="img/banner-02.png" class="img-responsive">
+    <div id="top" class="header">
+        <div id="overview" class="littletitle">
+            <h2 class="abailityratio">能力雷達圖</h2>
+
+            <div id="dountpie" class="abailitypic" style="width:60%">
+                <canvas id="canvas" height="500" width="450"></canvas>
+            </div>
+
         </div>
-    </header>
+    </div>
 
 
     <!-- jQuery -->
@@ -85,6 +88,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- pie -->
+    <script type="text/javascript" src="js/Chart.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
@@ -116,8 +122,45 @@
             }
         });
     });
+
     </script>
 
+    <script>
+    var radarChartData = {
+        labels: ["專業知識、知能傳授", "同學及老師人脈", "課程實務/實作活動", "業界實習", "社團活動", "語言學習", "語言學習", "研究或教學助理"],
+        datasets: [
+            // {
+            //     label: "My First dataset",
+            //     fillColor: "rgba(220,220,220,0.2)",
+            //     strokeColor: "rgba(220,220,220,1)",
+            //     pointColor: "rgba(220,220,220,1)",
+            //     pointStrokeColor: "#fff",
+            //     pointHighlightFill: "#fff",
+            //     pointHighlightStroke: "rgba(220,220,220,1)",
+            //     data: [65,59,90,81,56,55,40]
+            // },
+            {
+                label: "My Second dataset",
+                fillColor: "rgba(151,187,205,0.2)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: [27,15,23,7,7,4,2,8]
+            }
+        ]
+    };
+
+    window.onload = function(){
+        window.myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData, {
+            responsive: true
+        });
+    }
+
+    </script>
+
+    
 </body>
 
 </html>

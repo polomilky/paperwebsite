@@ -71,13 +71,15 @@
     </nav>
 
     <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Data Visualization</h1>
-            <h3>make awesome stuff with Data Visualization</h3>
-            <img class="bannerpic" src="img/banner-02.png" class="img-responsive">
+    <div id="top" class="header">
+        <div id="overview" class="littletitle">
+            <h2 class="Jobratio">就業人數</h2>
+            <div id="dountpie"class="jobbar" style="width:50%">
+                <canvas id="canvas" height="450" width="550"></canvas>
+            </div>
+
         </div>
-    </header>
+    </div>
 
 
     <!-- jQuery -->
@@ -85,6 +87,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- pie -->
+    <script type="text/javascript" src="js/Chart.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
@@ -116,6 +121,31 @@
             }
         });
     });
+    </script>
+
+    <script>
+    var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+
+    var barChartData = {
+        labels : ["工程師","美術設計師","行銷企劃","遊戲工程師","其它"],
+        datasets : [
+            {
+                fillColor : "rgba(220,220,220,0.5)",
+                strokeColor : "rgba(220,220,220,0.8)",
+                highlightFill: "rgba(220,220,220,0.75)",
+                highlightStroke: "rgba(220,220,220,1)",
+                data : [12,1,2,4,3]
+            }
+        ]
+
+    }
+    window.onload = function(){
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myBar = new Chart(ctx).Bar(barChartData, {
+            responsive : true
+        });
+    }
+
     </script>
 
 </body>
