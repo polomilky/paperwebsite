@@ -74,11 +74,26 @@
     <div id="top" class="header">
         <div id="overview" class="littletitle">
             <h2 class="genderratio">性別比率</h2>
-            <div id="pie"class="genderpie">
-                <img class="girlpic" src="img/girlpic-1-01.png">
-                <img class="boypic" src="img/boypic-1-01.png">
+            <div id="pie"class="genderpie1">
+                <h3>填寫學生數</h3>
+                <h4 style="line-height: 50px;">(大學部+碩士班)</h4>
+                <div class="numberRun1"></div>
             </div>
-
+            <div class="genderpie2">
+                <h3>碩士班男女比</h3>
+                <h3 class="cut">:</h3>
+                    <img class="boypic" src="img/wboy-01.png">
+                    <img class="girlpic" src="img/wgirl-01.png">
+                <h3 class="cut1">約1:1</h3>
+            </div>
+            <div class="genderpie3">
+                <h3>本系累積畢業生人數</h3>
+                <div class="numberRun2"></div>
+                <h5>大學部畢業生</h5>
+                <h5>232人</h5>
+                <h5>碩士班畢業生</h5>
+                <h5>249人</h5>
+            </div>
         </div>
     </div>
 
@@ -89,10 +104,8 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- pie -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
-    <script type="text/javascript" src="js/d3pie.js"></script>
-    <script type="text/javascript" src="js/pie2.js"></script>
+    <!-- 滾動數字 -->
+    <script src="js/count.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>

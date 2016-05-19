@@ -284,7 +284,7 @@ hr.small {
 
 .genderpie2 {
     float: left;
-    margin-left: 5%;
+    margin-left: 8%;
     margin-top: 15%;
     /*間距*/
     letter-spacing: 15px;
@@ -292,7 +292,7 @@ hr.small {
 
 .genderpie3 {
     float: left;
-    margin-left: 20%;
+    margin-left: 10%;
     margin-top: 15%;
     /*間距*/
     letter-spacing: 15px;
@@ -306,24 +306,39 @@ hr.small {
     float: left;
 }
 
-.girlpic {
-    z-index: 1000;
+.cut {
+    z-index: 2000;
     position: absolute;
-/*    width: 10%;*/
     float: left;
-    margin-left: -15%;
-/*    margin-top: 25%;*/
-/*    margin-right: 5%;*/
+    margin-left: 3.5%;
+    margin-top: 2.5%;
 }
 
 .boypic {
     z-index: 1000;
     position: absolute;
+/*    width: 10%;*/
+    float: left;
+    margin-left: -0.5%;
+    margin-top: 0.5%;
+/*    margin-right: 5%;*/
+}
+
+.girlpic {
+    z-index: 1000;
+    position: absolute;
 /*    width: 4%;*/
     float: left;
-    margin-left: 35%;
+    margin-left: 4.5%;
 /*    margin-left: 30%;*/
-    margin-top: 1%;
+    margin-top: 0.5%;
+}
+
+.cut1 {
+    z-index: 2000;
+    position: absolute;
+    float: left;
+    margin-top: 7%;
 }
 
 .moneyratio {
