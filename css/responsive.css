@@ -1,0 +1,89 @@
+/* lg */ 
+@media (min-width: 1200px) {
+ /* Make Navigation Toggle on Desktop Hover */
+  
+
+}
+
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+ /* Make Navigation Toggle on Desktop Hover */
+ /*sexratio*/
+  #genderpie1title{
+    margin-top: 30%;
+  }
+
+  .genderpie2{
+    margin-left: 20%;
+    margin-top: 16.5%;
+  }
+  .cut{
+    margin-top: 4.5%;
+    margin-left: 10.5%;
+  }
+  .boypic{
+    margin-top: 2%;
+    margin-left: 13%;
+  }
+  .girlpic{
+    margin-top: 2%;
+  }
+  .cut1{
+    margin-top: 11%;
+    margin-left: 5.5%;
+  }
+
+  #genderpie1title1{
+    margin-left: -105%;
+  }
+  .numberRun2{
+    margin-left: -105%;
+  }
+  #genderpie1title2{
+    margin-left: -105%;
+  }
+  #genderpie1title3{
+    margin-left: -105%;
+  }
+  #genderpie1title4{
+    margin-left: -105%;
+  }
+  #genderpie1title5{
+    margin-left: -105%;
+  }
+
+  /*moneyyear*/
+  .yearmoneypie{
+    margin-left: 47%;
+    margin-top: -45%;
+  }
+
+  /*ability*/
+  .abailitypic{
+    /*margin-top: -5%;*/
+    margin-left: 25%;
+  }
+
+}
+
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Make Navigation Toggle on Desktop Hover */
+
+  
+}
+
+/* xs */
+@media (max-width: 767px) {
+  
+
+}
+
+/* XS Portrait */
+@media (max-width: 480px) {
+
+
+}
+
