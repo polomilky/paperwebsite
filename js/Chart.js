@@ -129,7 +129,8 @@
 			tooltipEvents: ["mousemove", "touchstart", "touchmove", "mouseout"],
 
 			// String - Tooltip background colour
-			tooltipFillColor: "rgba(0,0,0,0.8)",
+			//提示框顏色
+			tooltipFillColor: "rgba(82,157,228,0.8)",
 
 			// String - Tooltip label font declaration for the scale label
 			//提示框字體

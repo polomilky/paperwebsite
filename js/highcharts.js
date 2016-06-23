@@ -506,7 +506,7 @@
     B.animate = Wa;
     B.stop = Oa;
     N = {
-        colors: "#e6bfc0,#b8e4e2,#b8d0e4,#b8e4cc,#ccb8e4,#f15c80,#e4d354,#2b908f,#f45b5b,#91e8e1".split(","),
+        colors: "#F59AF0,#55E9BC,#FAD662,#BA53DE,#FA5555,#f15c80,#e4d354,#2b908f,#f45b5b,#91e8e1".split(","),
         symbols: ["circle", "diamond", "square", "triangle", "triangle-down"],
         lang: { loading: "Loading...", months: "January,February,March,April,May,June,July,August,September,October,November,December".split(","), shortMonths: "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec".split(","), weekdays: "Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday".split(","), decimalPoint: ".", numericSymbols: "k,M,G,T,P,E".split(","), resetZoom: "Reset zoom", resetZoomTitle: "Reset zoom level 1:1", thousandsSep: " " },
         global: {

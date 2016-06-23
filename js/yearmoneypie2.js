@@ -33,10 +33,10 @@ var pie = new d3pie("pie", {
 
   data: {
     content: [
-      { label: "1年以下", value: 12, color:"#b7d28d" },
-      { label: "1~2年", value: 3, color:"#fecf45" },
-      { label: "2~3年", value: 4, color:"#fe9778" },
-      { label: "3年以上", value: 3, color:"#c38e9e" }
+      { label: "1年以下", value: 12, color:"#009874" },
+      { label: "1~2年", value: 3, color:"#E2492F" },
+      { label: "2~3年", value: 4, color:"#5B5EA6" },
+      { label: "3年以上", value: 3, color:"#EFC050" }
     ]
   },
   tooltips: {

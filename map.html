@@ -73,11 +73,13 @@
     <!-- Header -->
     <div id="top" class="header">
         <div>
-            <img class="mappic" src="img/map-1-01.png" class="img-responsive">
+            <a onmouseover="mouseOver3()" onmouseout="mouseOut3()">
+                <img class="mappic" src="img/map-2-01.png" class="img-responsive" id="b4">
+            </a>
 
             
-            <a id="jqtextcall" href="#">
-                <img class="mapjobs" src="img/arter.png" class="img-responsive">
+            <a id="jqtextcall" href="#" onmouseover="mouseOver()" onmouseout="mouseOut()">
+                <img class="mapjobs" src="img/arter1.png" class="img-responsive" id="b1">
             </a>
             <div id="hiddenbox"> 
 <!--                 <h3 style="color:black;">美術修課</h3> -->
@@ -105,8 +107,8 @@
                 <p>{色彩學} => {電腦動畫} - 信心水準 : 0.80</p> -->
             </div>
 
-            <a id="jqtextcall1" href="#">
-                <img class="mapjobs" src="img/programer.png" class="img-responsive">
+            <a id="jqtextcall1" href="#" onmouseover="mouseOver1()" onmouseout="mouseOut1()">
+                <img class="mapjobs" src="img/programer1.png" class="img-responsive" id="b2">
             </a>
             <div id="hiddenbox1"> 
 <!--                 <h3 style="color:black;">程式修課</h3> -->
@@ -129,8 +131,8 @@
                 <p>{物件導向程式設計} => {遊戲企劃}</p> -->
             </div>
 
-            <a id="jqtextcall2" href="#">
-                <img class="mapjobs" src="img/planer.png" class="img-responsive">
+            <a id="jqtextcall2" href="#" onmouseover="mouseOver2()" onmouseout="mouseOut2()">
+                <img class="mapjobs" src="img/planer1.png" class="img-responsive" id="b3">
             </a>
             <div id="hiddenbox2"> 
 <!--                 <h3 style="color:black;">企劃修課</h3> -->
@@ -217,8 +219,31 @@
         });
     });
 
+    function mouseOver(){
+        document.getElementById('b1').src ="img/arter.png"
+    }
+    function mouseOut(){
+        document.getElementById('b1').src ="img/arter1.png"
+    }
+    function mouseOver1(){
+        document.getElementById('b2').src ="img/programer.png"
+    }
+    function mouseOut1(){
+        document.getElementById('b2').src ="img/programer1.png"
+    }
+    function mouseOver2(){
+        document.getElementById('b3').src ="img/planer.png"
+    }
+    function mouseOut2(){
+        document.getElementById('b3').src ="img/planer1.png"
+    }
+    function mouseOver3(){
+        document.getElementById('b4').src ="img/map-1-01.png"
+    }
+    function mouseOut3(){
+        document.getElementById('b4').src ="img/map-2-01.png"
+    }
 </script>
-
 </body>
 
 </html>
