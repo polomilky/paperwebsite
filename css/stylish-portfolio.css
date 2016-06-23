@@ -39,6 +39,7 @@ h3,h4,h5 {
     color:white;
 }
 
+
 /* Custom Button Styles */
 
 .btn-dark {
@@ -277,10 +278,14 @@ hr.small {
     float: left;
     /*width: 20%;*/
     /*margin-left: 15%;*/
-    margin-top: 15%;
+    margin-top: 14%;
     /*間距*/
     letter-spacing: 15px;
 }
+
+#genderpie1title{
+    margin-top: 30%;
+  }
 
 .genderpie2 {
     float: left;
@@ -392,7 +397,7 @@ hr.small {
     overflow: hidden; 
     display: inline-block; 
     position: relative;
-    color: white;
+/*    color: white;*/
 }
 .mt-number-animate .mt-number-animate-dot{ 
     width: 15px;/*设置分割符宽度*/ 
